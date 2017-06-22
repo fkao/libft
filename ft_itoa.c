@@ -6,7 +6,7 @@
 /*   By: fkao <fkao@student.42.us.org>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/03/06 14:01:33 by fkao              #+#    #+#             */
-/*   Updated: 2017/06/14 13:16:00 by fkao             ###   ########.fr       */
+/*   Updated: 2017/06/21 18:35:55 by fkao             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char			*ft_itoa(int n)
 	size_t		len;
 	long		nbr;
 
-	len = ft_countint(n);
+	len = ft_intlen(n);
 	str = ft_strnew(len);
 	if (str)
 	{

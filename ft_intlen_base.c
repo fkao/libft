@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_countint_base.c                                 :+:      :+:    :+:   */
+/*   ft_intlen_base.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fkao <fkao@student.42.us.org>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/06/14 11:56:41 by fkao              #+#    #+#             */
-/*   Updated: 2017/06/14 13:13:31 by fkao             ###   ########.fr       */
+/*   Created: 2017/06/21 17:59:33 by fkao              #+#    #+#             */
+/*   Updated: 2017/06/21 17:59:41 by fkao             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_countint_base(int n, size_t base)
+size_t	ft_intlen_base(int n, size_t base)
 {
 	size_t	len;
 

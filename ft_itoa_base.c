@@ -6,7 +6,7 @@
 /*   By: fkao <fkao@student.42.us.org>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/06/14 11:17:02 by fkao              #+#    #+#             */
-/*   Updated: 2017/06/14 13:17:19 by fkao             ###   ########.fr       */
+/*   Updated: 2017/06/22 11:53:06 by fkao             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ char	*ft_itoa_base(int n, size_t base)
 
 	if (base < 2 || base > 16)
 		return (0);
-	len = ft_countint_base(n, base);
+	len = ft_intlen_base(n, base);
 	str = ft_strnew(len);
 	if (str)
 	{
