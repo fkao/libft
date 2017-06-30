@@ -6,7 +6,7 @@
 /*   By: fkao <fkao@student.42.us.org>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/03/02 11:55:46 by fkao              #+#    #+#             */
-/*   Updated: 2017/06/22 11:55:15 by fkao             ###   ########.fr       */
+/*   Updated: 2017/06/29 18:49:12 by fkao             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,7 @@ int					get_next_line(const int fd, char **line);
 */
 int					ft_atoi(const char *str);
 char				*ft_itoa(int n);
+char				*ft_itoa_base(int n, size_t base);
 int					ft_tolower(int c);
 int					ft_toupper(int c);
 unsigned long		ft_toabsl(long n);
