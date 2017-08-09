@@ -6,7 +6,7 @@
 /*   By: fkao <fkao@student.42.us.org>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/06/14 11:17:02 by fkao              #+#    #+#             */
-/*   Updated: 2017/06/22 11:53:06 by fkao             ###   ########.fr       */
+/*   Updated: 2017/08/09 15:25:07 by fkao             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ char	*ft_itoa_base(int n, size_t base)
 			*str = '0';
 		if (n < 0 && base == 10)
 			*str = '-';
-		nbr = ft_toabsl(n);
+		nbr = (n < 0) ? n * -1 : n;
 		ptr = str + len - 1;
 		while (nbr)
 		{
