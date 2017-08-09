@@ -6,7 +6,7 @@
 #    By: fkao <fkao@student.42.us.org>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/02/27 11:19:09 by fkao              #+#    #+#              #
-#    Updated: 2017/06/22 11:49:29 by fkao             ###   ########.fr        #
+#    Updated: 2017/08/09 15:37:52 by fkao             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,7 +15,7 @@ NAME	= libft.a
 INCL	= -I./includes
 
 SRC		= ft_atoi.c ft_itoa.c ft_itoa_base.c ft_tolower.c ft_toupper.c \
-ft_toabsl.c \
+ft_absd.c ft_absl.c \
 ft_intlen.c ft_intlen_base.c ft_lstlen.c ft_strlen.c ft_countstr.c \
 ft_islower.c ft_isupper.c ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c \
 	ft_isprint.c ft_isspace.c \
