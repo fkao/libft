@@ -6,7 +6,7 @@
 #    By: fkao <fkao@student.42.us.org>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/02/27 11:19:09 by fkao              #+#    #+#              #
-#    Updated: 2017/08/22 13:28:17 by fkao             ###   ########.fr        #
+#    Updated: 2017/08/22 13:43:38 by fkao             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -32,9 +32,6 @@ ft_putchar.c ft_putchar_fd.c ft_putendl.c ft_putendl_fd.c ft_putnbr.c \
 	ft_putnbr_fd.c ft_putstr.c ft_putstr_fd.c \
 get_next_line.c
 
-SRC		= $(addprefix $(SDIR), $(SFILE))
-SDIR	= ./src/
-
 OFILE	= $(SFILE:.c=.o)
 OBJ		= $(addprefix $(ODIR), $(OFILE))
 ODIR	= ./obj/
@@ -44,7 +41,7 @@ RM		= rm -rf
 
 all: $(NAME)
 
-$(ODIR)%.o: $(SDIR)%.c
+$(ODIR)%.o: %.c
 	@mkdir -p $(ODIR)
 	@gcc -c $< -o $@ $(FLAG) $(INCL)
 
