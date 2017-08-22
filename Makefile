@@ -6,7 +6,7 @@
 #    By: fkao <fkao@student.42.us.org>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/02/27 11:19:09 by fkao              #+#    #+#              #
-#    Updated: 2017/08/09 15:37:52 by fkao             ###   ########.fr        #
+#    Updated: 2017/08/22 13:28:17 by fkao             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@ NAME	= libft.a
 
 INCL	= -I./includes
 
-SRC		= ft_atoi.c ft_itoa.c ft_itoa_base.c ft_tolower.c ft_toupper.c \
+SFILE	= ft_atoi.c ft_itoa.c ft_itoa_base.c ft_tolower.c ft_toupper.c \
 ft_absd.c ft_absl.c \
 ft_intlen.c ft_intlen_base.c ft_lstlen.c ft_strlen.c ft_countstr.c \
 ft_islower.c ft_isupper.c ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c \
@@ -32,21 +32,23 @@ ft_putchar.c ft_putchar_fd.c ft_putendl.c ft_putendl_fd.c ft_putnbr.c \
 	ft_putnbr_fd.c ft_putstr.c ft_putstr_fd.c \
 get_next_line.c
 
-OBJ		= $(addprefix $(ODIR), $(SRC:.c=.o))
-ODIR	= obj/
+SRC		= $(addprefix $(SDIR), $(SFILE))
+SDIR	= ./src/
+
+OFILE	= $(SFILE:.c=.o)
+OBJ		= $(addprefix $(ODIR), $(OFILE))
+ODIR	= ./obj/
 
 FLAG	= -Wall -Wextra -Werror
 RM		= rm -rf
 
 all: $(NAME)
 
-$(ODIR)%.o: %.c
-	@gcc $(FLAG) $(INCL) -c $< -o $@
-
-ofile:
+$(ODIR)%.o: $(SDIR)%.c
 	@mkdir -p $(ODIR)
+	@gcc -c $< -o $@ $(FLAG) $(INCL)
 
-$(NAME): ofile $(OBJ)
+$(NAME): $(OBJ)
 	@ar rc $(NAME) $(OBJ)
 	@ranlib $(NAME)
 
